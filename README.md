@@ -1,5 +1,10 @@
 ## Deploy Kubernetes HA with Ansible
 
+### Requirements:
+- Ansible 2.1.*
+- Vagrant 1.8.*
+- VirtualBox 5.*
+
 ### Check available hosts on vagrant:
 ```vagrant status```
 
