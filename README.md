@@ -20,13 +20,13 @@ example:
 ```ansible -i ./hosts all -m ping```
 
 #### Limit connection test to one host:
-ansible -i ./hosts all --limit prod-docker-registry -m ping
+```ansible -i ./hosts all --limit prod-docker-registry -m ping```
 
 #### Ansible dry run:
 ```ansible-playbook -i ./hosts --limit docker-registry playbook.yaml --chec```
 
 #### Run Ansible on remote host group:
-ansible-playbook -i ./hosts --limit docker-registry playbook.yaml
+```ansible-playbook -i ./hosts --limit docker-registry playbook.yaml```
 
 - -i - file with hosts list
 - --limit - run only on host from group
