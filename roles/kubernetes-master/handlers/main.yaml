@@ -1,0 +1,36 @@
+---
+- name: start kube-scheduler
+  service: name=kube-scheduler enabled=yes state=started
+
+- name: restart kube-scheduler
+  service: name=kube-scheduler state=restarted
+
+- name: reload kube-scheduler
+  service: name=kube-scheduler state=reloaded
+
+- name: stop kube-scheduler
+  service: name=kube-scheduler state=stopped
+
+- name: start kube-controller-manager
+  service: name=kube-controller-manager enabled=yes state=started
+
+- name: restart kube-controller-manager
+  service: name=etcd state=restarted
+
+- name: reload kube-controller-manager
+  service: name=kube-controller-manager state=reloaded
+
+- name: stop kube-controller-manager
+  service: name=kube-controller-manager state=stopped
+
+- name: start kube-apiserver
+  service: name=kube-apiserver enabled=yes state=started
+
+- name: restart kube-apiserver
+  service: name=kube-apiserver state=restarted
+
+- name: reload kube-apiserver
+  service: name=kube-apiserver state=reloaded
+
+- name: stop etcd
+  service: name=kube-apiserver state=stopped
