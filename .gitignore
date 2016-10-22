@@ -26,3 +26,4 @@ mkmf.log
 .project
 .tmp/
 .ansible*
+playbook.retry
