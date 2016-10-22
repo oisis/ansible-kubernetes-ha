@@ -1,0 +1,5 @@
+---
+etcd_cluster_hosts:
+  host1: etcd1.vagrant.loc
+  host2: etcd2.vagrant.loc
+  host3: etcd3.vagrant.loc

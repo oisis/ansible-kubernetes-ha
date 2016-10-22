@@ -1,0 +1,10 @@
+---
+- name: install the latest version of ETCd
+  yum: name=etcd state=latest
+
+- name: Create ETCd configuration file
+  template:
+    src="etcd.conf.j2"
+    dest="/etc/etcd/etcd.conf"
+  notify:
+    - start etcd

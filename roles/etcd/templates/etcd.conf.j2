@@ -1,0 +1,18 @@
+# [member]
+ETCD_NAME="{{ ansible_hostname }}"
+ETCD_DATA_DIR="/var/lib/etcd/{{ ansible_hostname }}.etcd"
+ETCD_LISTEN_PEER_URLS="http://0.0.0.0:2380,http://0.0.0.0:7001"
+ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379,http://0.0.0.0:4001"
+
+#[cluster]
+ETCD_INITIAL_ADVERTISE_PEER_URLS="http://{{ ansible_fqdn }}:2380"
+# if you use different ETCD_NAME (e.g. test), set ETCD_INITIAL_CLUSTER value for this name, i.e. "test=http://..."
+ETCD_INITIAL_CLUSTER="{{ etcd_cluster_hosts.host1.split('.')[0] }}=http://{{ etcd_cluster_hosts.host1 }}:2380,{{ etcd_cluster_hosts.host2.split('.')[0] }}=http://{{ etcd_cluster_hosts.host2 }}:2380,{{ etcd_cluster_hosts.host3.split('.')[0] }}=http://{{ etcd_cluster_hosts.host3 }}:2380"
+ETCD_ADVERTISE_CLIENT_URLS="http://{{ ansible_fqdn }}:2379,http://{{ ansible_fqdn }}:4001"
+
+#[proxy]
+ETCD_PROXY="off"
+
+#[security]
+
+#[logging]

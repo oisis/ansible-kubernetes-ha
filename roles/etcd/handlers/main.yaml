@@ -1,0 +1,12 @@
+---
+- name: start etcd
+  service: name=etcd enabled=yes state=started
+
+- name: restart etcd
+  service: name=etcd state=restarted
+
+- name: reload etcd
+  service: name=etcd state=reloaded
+
+- name: stop etcd
+  service: name=etcd state=stopped

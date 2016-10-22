@@ -1,0 +1,12 @@
+---
+# Workaround for Vagrant 1.8.6
+- service: name=network state=restarted
+
+# Install yum repos first
+- include: yum_repos.yaml
+
+# Install base packages
+- include: base_packages.yaml
+
+# Turn off selinux
+- selinux: state=disabled

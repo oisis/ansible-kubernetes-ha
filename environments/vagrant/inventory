@@ -1,0 +1,15 @@
+[etcd]
+etcd1 ansible_host=192.168.0.2 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+etcd2 ansible_host=192.168.0.3 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+etcd3 ansible_host=192.168.0.4 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+[k8s]
+k8s1 ansible_host=192.168.0.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+k8s2 ansible_host=192.168.0.11 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+[node]
+node1 ansible_host=192.168.0.20 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+node2 ansible_host=192.168.0.21 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+[lb]
+lb ansible_host=192.168.0.100 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
