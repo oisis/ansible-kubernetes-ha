@@ -29,7 +29,6 @@
     - flannel
     - docker
     - kubernetes-master
-    - k8s-ingress
     - skydns
 
 - hosts: node
