@@ -23,7 +23,7 @@ example:
 ```ansible -i ./hosts all --limit prod-docker-registry -m ping```
 
 #### Ansible dry run:
-```ansible-playbook -i ./hosts --limit docker-registry playbook.yaml --chec```
+```ansible-playbook -i ./hosts --limit docker-registry playbook.yaml --check```
 
 #### Run Ansible on remote host group:
 ```ansible-playbook -i ./hosts --limit docker-registry playbook.yaml```
