@@ -29,7 +29,6 @@
     - flannel
     - docker
     - kubernetes-master
-    - skydns
 
 - hosts: node
   become: true
