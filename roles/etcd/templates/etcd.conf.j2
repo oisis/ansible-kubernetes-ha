@@ -3,6 +3,9 @@
   {% set short_name = host.split('.')[0] %}
   {% set _= all_etcd.append("%s=http://%s:2380" % (short_name, host)) %}
 {% endfor %}
+#
+# {{ ansible_managed }}
+#
 
 # [member]
 ETCD_NAME="{{ ansible_hostname }}"
