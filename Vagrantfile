@@ -40,6 +40,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       # ansible.verbose = "vvvv"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "etcd1.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant" ]
     end
@@ -55,6 +56,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "etcd2.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end
@@ -70,6 +72,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "etcd3.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end
@@ -87,6 +90,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "k8s1.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end
@@ -102,6 +106,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "k8s2.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end
@@ -117,6 +122,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "node1.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end
@@ -132,6 +138,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "node2.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end
@@ -150,6 +157,7 @@ SCRIPT
     config.vm.provision :ansible do |ansible|
       ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
+      ansible.limit = "lb.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
       ansible.raw_arguments  = [ "--connection=paramiko", "-e env=vagrant"]
     end

@@ -29,9 +29,6 @@
     - flannel
     - docker
     - kubernetes-master
-    - glusterfs
-    - k8s-ingress
-    - skydns
 
 - hosts: node
   become: true
