@@ -1,17 +1,11 @@
 ---
 - hosts: all
-  become: true
-  become_user: root
-  become_method: sudo
   vars_files:
     - "environments/{{ env }}/group_vars/main.yaml"
   roles:
     - base
 
 - hosts: etcd
-  become: true
-  become_user: root
-  become_method: sudo
   vars_files:
     - "environments/{{ env }}/group_vars/main.yaml"
     - "environments/{{ env }}/hosts_vars/main.yaml"
@@ -19,9 +13,6 @@
     - etcd
 
 - hosts: k8s
-  become: true
-  become_user: root
-  become_method: sudo
   vars_files:
     - "environments/{{ env }}/group_vars/main.yaml"
     - "environments/{{ env }}/hosts_vars/main.yaml"
@@ -31,9 +22,6 @@
     - kubernetes-master
 
 - hosts: node
-  become: true
-  become_user: root
-  become_method: sudo
   vars_files:
     - "environments/{{ env }}/group_vars/main.yaml"
     - "environments/{{ env }}/hosts_vars/main.yaml"
