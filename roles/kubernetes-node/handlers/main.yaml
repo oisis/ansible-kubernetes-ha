@@ -1,0 +1,24 @@
+---
+- name: start kubelet
+  service: name=kubelet enabled=yes state=started
+
+- name: restart kubelet
+  service: name=kubelet state=restarted
+
+- name: reload kubelet
+  service: name=kubelet state=reloaded
+
+- name: stop kubelet
+  service: name=kubelet state=stopped
+
+- name: start kube-proxy
+  service: name=kube-proxy enabled=yes state=started
+
+- name: restart kube-proxy
+  service: name=kube-proxy state=restarted
+
+- name: reload kube-proxy
+  service: name=kube-proxy state=reloaded
+
+- name: stop kube-proxy
+  service: name=kube-proxy state=stopped
