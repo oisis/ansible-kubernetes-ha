@@ -1,0 +1,11 @@
+---
+- name: install the latest version of Flanneld
+  yum: name=flannel state=latest
+
+- name: Create Flanneld configuration file
+  template:
+    src="flanneld.j2"
+    dest="/etc/sysconfig/flanneld"
+  notify:
+    - start flannel
+    - restart docker
