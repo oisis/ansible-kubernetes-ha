@@ -2,11 +2,11 @@
 - name: install epel repository
   yum: name=epel-release state=latest
 
-- name: Add Yum rpmforge repository
-  yum_repository:
-    name: rpmforge
-    description: RPMforge YUM repo
-    file: external_repos
-    baseurl: http://apt.sw.be/redhat/el7/en/$basearch/rpmforge
-    mirrorlist: http://mirrorlist.repoforge.org/el7/mirrors-rpmforge
-    enabled: yes
+# - name: Add Yum rpmforge repository
+#   yum_repository:
+#     name: rpmforge
+#     description: RPMforge YUM repo
+#     file: external_repos
+#     baseurl: http://apt.sw.be/redhat/el7/en/$basearch/rpmforge
+#     mirrorlist: http://mirrorlist.repoforge.org/el7/mirrors-rpmforge
+#     enabled: yes
