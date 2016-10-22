@@ -29,6 +29,7 @@
     - flannel
     - docker
     - kubernetes-master
+    - glusterfs
 
 - hosts: node
   become: true
