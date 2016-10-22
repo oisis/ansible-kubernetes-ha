@@ -1,15 +1,15 @@
 [etcd]
-etcd1 ansible_host=172.15.0.22 ansible_ssh_user=sshuser
-etcd2 ansible_host=172.15.0.13 ansible_ssh_user=sshuser
-etcd3 ansible_host=172.15.0.34 ansible_ssh_user=sshuser
+etcd1.example.com ansible_host=172.15.0.22 ansible_ssh_user=sshuser
+etcd2.example.com ansible_host=172.15.0.13 ansible_ssh_user=sshuser
+etcd3.example.com ansible_host=172.15.0.34 ansible_ssh_user=sshuser
 
 [k8s]
-k8s1 ansible_host=172.15.0.35 ansible_ssh_user=sshuser
-k8s2 ansible_host=172.15.0.25 ansible_ssh_user=sshuser
+k8s1.example.com ansible_host=172.15.0.35 ansible_ssh_user=sshuser
+k8s2.example.com ansible_host=172.15.0.25 ansible_ssh_user=sshuser
 
 [node]
-node1 ansible_host=15.168.0.11 ansible_ssh_user=sshuser
-node2 ansible_host=15.168.0.21 ansible_ssh_user=sshuser
+node1.example.com ansible_host=15.168.0.11 ansible_ssh_user=sshuser
+node2.example.com ansible_host=15.168.0.21 ansible_ssh_user=sshuser
 
 [lb]
-lb ansible_host=172.15.0.2 ansible_ssh_user=sshuser
+lb.example.com ansible_host=172.15.0.2 ansible_ssh_user=sshuser
