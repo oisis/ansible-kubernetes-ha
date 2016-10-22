@@ -38,7 +38,7 @@ SCRIPT
     config.vm.provision "shell", inline: $fill_hosts
     config.vm.network :private_network,ip: "192.168.0.2"
     config.vm.provision :ansible do |ansible|
-      # ansible.verbose = "vvvv"
+      ansible.verbose = "false"
       ansible.playbook = "playbook.yaml"
       ansible.limit = "etcd1.vagrant.loc"
       ansible.inventory_path = "environments/vagrant/inventory"
