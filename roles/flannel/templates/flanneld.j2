@@ -5,11 +5,11 @@
 # Flanneld configuration options
 
 # etcd url location.  Point this to the server where etcd runs
-FLANNEL_ETCD="http://p-gds-etcd.hrs.de:2379"
+FLANNEL_ETCD="http://{{ flannel_etcd_host }}:{{ flannel_etcd_port }}"
 
 # etcd config key.  This is the configuration key that flannel queries
 # For address range assignment
-FLANNEL_ETCD_KEY="/cluster.local/network"
+FLANNEL_ETCD_KEY="{{ flannel_etcd_key }}"
 
 # Any additional options that you want to pass
-FLANNEL_OPTIONS=" -alsologtostderr=false -iface=eth1 -ip-masq=false -subnet-dir=/run/flannel/networks -subnet-file=/run/flannel/subnet.env"
+FLANNEL_OPTIONS=" -alsologtostderr=false -iface={{ flannel_interface }} -ip-masq={{ flannel_ipmasq }} -subnet-dir={{ flannel_subnet_dir }} -subnet-file={{ flannel_subnet_file }}"
